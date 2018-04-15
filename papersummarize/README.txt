@@ -4,26 +4,22 @@ papersummarize
 Getting Started
 ---------------
 
-- Change directory into your newly created project.
-
-    cd papersummarize
-
-- Create a Python virtual environment.
-
-    python3 -m venv env
-
-- Upgrade packaging tools.
-
-    env/bin/pip install --upgrade pip setuptools
-
 - Install the project in editable mode with its testing requirements.
 
-    env/bin/pip install -e ".[testing]"
+    pip install -e ".[testing]"
 
 - Run your project's tests.
 
-    env/bin/pytest
+    pytest
 
 - Run your project.
 
-    env/bin/pserve development.ini
+    pserve development.ini
+
+- Run mongo.
+
+    docker run -d -p 27017:27017 --name ps_mongo mongo:latest
+
+- Rest database.
+
+    python scripts/reset_database.py

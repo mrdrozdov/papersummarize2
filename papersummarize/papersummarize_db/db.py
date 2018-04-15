@@ -1,10 +1,7 @@
 from urllib.parse import urlparse
 from mongoengine import *
 
-
-class Paper(Document):
-    author = StringField()
-    title = StringField()
+from papersummarize_db.paper import Paper
 
 
 class PSDatabase(object):

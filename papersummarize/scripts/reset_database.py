@@ -1,6 +1,10 @@
-import argparse
-from papersummarize_db.db import PSMongoDatabase, Paper
 import time
+import pickle
+import argparse
+
+from papersummarize_db.db import PSMongoDatabase, Paper
+from papersummarize_db.converters import ArxivConverter
+from papersummarize_db.tests.test_converters import db_path as arxiv_path
 
 
 def reset_database(options):
@@ -11,11 +15,8 @@ def reset_database(options):
 
     Paper.drop_collection()
 
-    documents = [
-        Paper(author='Stephen Hawking', title='The Classics (aka Physics) and Music'),
-        Paper(author='Michael', title='"Whoop! There is gradients", and other hits')
-    ]
-
+    arxiv_papers = pickle.load(open(arxiv_path, 'rb'))
+    documents = [ArxivConverter.convert_one(p) for p in arxiv_papers.values()]
     results = db.batch_add(documents)
 
     print('collection has {} documents'.format(len(db.find())))

@@ -2,5 +2,5 @@ from pyramid.view import view_config
 
 
 def new_feed(request):
-    papers = request.registry.db.find()
+    papers = request.registry.db.find()[:30]
     return {'project': 'papersummarize', 'papers': papers}

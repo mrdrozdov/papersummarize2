@@ -25,7 +25,7 @@ class ViewTests(unittest.TestCase):
 
     def test_papers_in_feed(self):
         info = home(self.request)
-        self.assertEqual(len(info['papers']), 2)
+        self.assertEqual(len(info['papers']), 30)
 
     def test_paper_id_in_url(self):
         paper_id = 'my-paper-id'

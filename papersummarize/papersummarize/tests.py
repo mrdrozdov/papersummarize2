@@ -43,7 +43,7 @@ class FunctionalTests(unittest.TestCase):
 
     def test_home(self):
         res = self.testapp.get('/', status=200)
-        self.assertTrue(b'Pyramid' in res.body)
+        self.assertTrue(b'Paper Summarize' in res.body)
 
     def test_paper(self):
         paper_id = 'my-paper-id'

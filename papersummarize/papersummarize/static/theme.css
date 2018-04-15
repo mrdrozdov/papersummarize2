@@ -2,8 +2,6 @@
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  color: #ffffff;
-  background: #bc2131;
 }
 h1,
 h2,
@@ -27,7 +25,7 @@ p {
   font-weight: 700;
 }
 .starter-template {
-  margin-top: 250px;
+  margin-top: 20px;
 }
 .starter-template .content {
   margin-left: 10px;
@@ -72,14 +70,6 @@ p {
   color: #f2b7bd;
   font-weight: 400;
 }
-.starter-template .links ul li a, a {
-  color: #f2b7bd;
-  text-decoration: underline;
-}
-.starter-template .links ul li a:hover, a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
 .starter-template .links ul li .icon-muted {
   color: #eb8b95;
   margin-right: 5px;
@@ -107,12 +97,7 @@ p {
   }
 }
 @media (max-width: 991px) {
-  .starter-template {
-    margin-top: 0;
-  }
-  .starter-template .logo {
-    margin: 40px auto;
-  }
+  .starter-template {}
   .starter-template .content {
     margin-left: 0;
     text-align: center;
@@ -151,4 +136,130 @@ p {
   .starter-template .copyright {
     margin-top: 20px;
   }
+}
+
+/* theme */
+
+body {
+  background: #d4dfd0;
+  min-width: 600px;
+}
+
+a:hover, a:focus {
+  /*text-decoration: none;*/
+  /*background: #337287;*/
+  color: #337287;
+  /*color: #DFAD2D;*/
+}
+
+a.nohover:hover,
+a.nohover:focus {
+  background: inherit;
+  color: inherit;
+}
+
+a {
+  background: transparent;
+  text-decoration: none;
+  /*border-radius: 3px;*/
+  color: #337287;
+}
+
+.list-inline>li {
+  padding-right: 0px; 
+  padding-left: 0px; 
+}
+
+ul.list-inline {
+  margin-bottom: 0;
+}
+
+ul.logo>li:first-child {
+  border-bottom: 4px solid #849285;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+ul.list-inline>li:not(:first-child):before {
+  content: " | ";
+}
+
+.header {
+  padding-top: 10px;
+  background-color: #475c4d;
+  color: #fff;
+}
+
+.header a:hover,
+.header a:focus {
+  text-decoration: none;
+  background: none;
+  color: #fff;
+}
+
+.header a {
+  color: #adc0b3;
+}
+
+li.nodivider {
+  content: none;
+}
+
+ul.list-inline.nodivider>li:not(:first-child):before {
+  content: none;
+}
+
+ul.list-inline.dashdivider>li:not(:first-child):before {
+  content: none;
+}
+
+/* PaperSummarize */
+
+body {
+  min-width: 644px;
+}
+
+.main {
+  max-width: 1000px;
+}
+
+.main-nav {
+  margin-top: 10px;
+}
+
+/* paper_cell */
+
+.paper-cell {
+  margin: 0 0 10px;
+}
+
+.tag-close {
+  float: none !important;
+}
+
+.form-tag {
+  display: inline-block !important;
+  vertical-align: inherit !important;
+}
+
+.form-group-tag {
+  display: inline-block !important;
+  vertical-align: inherit !important;
+}
+
+.input-tag {
+  height: 100%;
+  font-size: 10px;
+  line-height: 1;
+  border-radius: 0;
+  border: 1px solid rgba(204, 204, 204, 0.6);
+  width: 80px;
+  background-color: rgba(255, 255, 255, 0.0);
+  padding: 0 0 0 10px;
+}
+
+/* add_tip */
+
+.form-tip {
+  width: 300px;
 }

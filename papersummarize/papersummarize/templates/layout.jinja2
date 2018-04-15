@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pyramid web application">
-    <meta name="author" content="Pylons Project">
+    <meta name="description" content="paper summarize">
+    <meta name="author" content="andrew drozdov">
     <link rel="shortcut icon" href="{{request.static_url('papersummarize:static/pyramid-16x16.png')}}">
 
-    <title>Cookiecutter Starter project for the Pyramid Web Framework</title>
+    <title>{% block subtitle %}{% endblock %}Paper Summarize</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="{{request.static_url('papersummarize:static/vendor/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom styles for this scaffold -->
     <link href="{{request.static_url('papersummarize:static/theme.css')}}" rel="stylesheet">
@@ -26,31 +27,21 @@
   <body>
 
     <div class="starter-template">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2">
-            <img class="logo img-responsive" src="{{request.static_url('papersummarize:static/pyramid.png') }}" alt="pyramid web framework">
+      <div class="container main">
+        <div class="row header">
+          <div class="col-xs-8">
+            <ul class="list-inline logo">
+              <li class="list-inline-item"><a href="/">Paper Summarize</a></li>
+              <li class="list-inline-item">Research, in your own words.</li>
+            </ul>
           </div>
-          <div class="col-md-10">
-            {% block content %}
-                <p>No content</p>
-            {% endblock content %}
-          </div>
-        </div>
-        <div class="row">
-          <div class="links">
-            <ul>
-              <li><i class="glyphicon glyphicon-cog icon-muted"></i><a href="https://github.com/Pylons/pyramid">Github Project</a></li>
-              <li><i class="glyphicon glyphicon-globe icon-muted"></i><a href="https://webchat.freenode.net/?channels=pyramid">IRC Channel</a></li>
-              <li><i class="glyphicon glyphicon-home icon-muted"></i><a href="https://pylonsproject.org">Pylons Project</a></li>
+          <div class="col-xs-4">
+            <ul class="list-inline pull-right">
+              <!-- Login -->
             </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="copyright">
-            Copyright &copy; Pylons Project
-          </div>
-        </div>
+        {% block content %}{% endblock %}
       </div>
     </div>
 
@@ -58,7 +49,20 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
-    <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script>
+    <!-- <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script> -->
+    <!-- <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script> -->
+    <script src="{{request.static_url('papersummarize:static/vendor/jquery.min.js')}}" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
+    <script src="{{request.static_url('papersummarize:static/vendor/bootstrap.min.js')}}" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script>
+
+    <!-- Other JavaScript
+    ================================================== -->
+    <script src="{{request.static_url('papersummarize:static/vendor/react.min.js')}}"></script>
+    <script src="{{request.static_url('papersummarize:static/vendor/react-dom.min.js')}}"></script>
+    <script src="{{request.static_url('papersummarize:static/js/shared/linkify.min.js')}}"></script>
+    <script src="{{request.static_url('papersummarize:static/js/shared/linkify-jquery.min.js')}}"></script>
+
+    <!-- Custom View JavaScript
+    ================================================== -->
+    {% block js %}{% endblock %}
   </body>
 </html>

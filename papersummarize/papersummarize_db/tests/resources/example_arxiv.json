@@ -1,0 +1,82 @@
+{
+    "_rawid": "1804.04647",
+    "_version": 1,
+    "arxiv_comment": "Submitted to ICIP 2018",
+    "arxiv_primary_category": {
+        "scheme": "http://arxiv.org/schemas/atom",
+        "term": "cs.CV"
+    },
+    "author": "Radu Timofte",
+    "author_detail": {
+        "name": "Radu Timofte"
+    },
+    "authors": [
+        {
+            "name": "Yigit Baran Can"
+        },
+        {
+            "name": "Radu Timofte"
+        }
+    ],
+    "guidislink": true,
+    "id": "http://arxiv.org/abs/1804.04647v1",
+    "link": "http://arxiv.org/abs/1804.04647v1",
+    "links": [
+        {
+            "href": "http://arxiv.org/abs/1804.04647v1",
+            "rel": "alternate",
+            "type": "text/html"
+        },
+        {
+            "href": "http://arxiv.org/pdf/1804.04647v1",
+            "rel": "related",
+            "title": "pdf",
+            "type": "application/pdf"
+        }
+    ],
+    "published": "2018-04-12T17:48:05Z",
+    "published_parsed": [
+        2018,
+        4,
+        12,
+        17,
+        48,
+        5,
+        3,
+        102,
+        0
+    ],
+    "summary": "Recently, the example-based single image spectral reconstruction from RGB\nimages task, aka, spectral super-resolution was approached by means of deep\nlearning by Galliani et al. The proposed very deep convolutional neural network\n(CNN) achieved superior performance on recent large benchmarks. However,\nAeschbacher et al showed that comparable performance can be achieved by shallow\nlearning method based on A+, a method introduced for image super-resolution by\nTimofte et al. In this paper, we propose a moderately deep CNN model and\nsubstantially improve the reported performance on three spectral reconstruction\nstandard benchmarks: ICVL, CAVE, and NUS.",
+    "summary_detail": {
+        "base": "",
+        "language": null,
+        "type": "text/plain",
+        "value": "Recently, the example-based single image spectral reconstruction from RGB\nimages task, aka, spectral super-resolution was approached by means of deep\nlearning by Galliani et al. The proposed very deep convolutional neural network\n(CNN) achieved superior performance on recent large benchmarks. However,\nAeschbacher et al showed that comparable performance can be achieved by shallow\nlearning method based on A+, a method introduced for image super-resolution by\nTimofte et al. In this paper, we propose a moderately deep CNN model and\nsubstantially improve the reported performance on three spectral reconstruction\nstandard benchmarks: ICVL, CAVE, and NUS."
+    },
+    "tags": [
+        {
+            "label": null,
+            "scheme": "http://arxiv.org/schemas/atom",
+            "term": "cs.CV"
+        }
+    ],
+    "title": "An efficient CNN for spectral reconstruction from RGB images",
+    "title_detail": {
+        "base": "",
+        "language": null,
+        "type": "text/plain",
+        "value": "An efficient CNN for spectral reconstruction from RGB images"
+    },
+    "updated": "2018-04-12T17:48:05Z",
+    "updated_parsed": [
+        2018,
+        4,
+        12,
+        17,
+        48,
+        5,
+        3,
+        102,
+        0
+    ]
+}

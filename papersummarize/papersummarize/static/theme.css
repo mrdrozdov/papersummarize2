@@ -217,6 +217,13 @@ ul.list-inline.feed-nav>li:not(:first-child):before {
   color: #fff;
 }
 
+a.icon:hover,
+a.icon:focus {
+  text-decoration: none;
+  background: none;
+  color: black;
+}
+
 .header a {
   color: #adc0b3;
 }
@@ -251,6 +258,10 @@ body {
 
 .paper-cell {
   margin: 0 0 10px;
+}
+
+.paper-cell-buttons {
+  margin-top: 5px;
 }
 
 .tag-close {

@@ -1,17 +1,20 @@
 <div class="paper-cell row">
     <div class="paper-cell-body col-12">
-        <div class="font-weight-bold"><a href="{{ request.route_url('paper', paper_id=paper.id) }}">{{ paper.title }}</a></div>
+        <div class="font-weight-bold">
+            <a class="icon" href="{{paper.link}}"><i class="fa fa-link"></i></a>
+            <a href="{{ request.route_url('paper', paper_id=paper.id) }}">{{ paper.title }}</a></div>
         <div>
             {% for author in paper.authors %}
             {{ author }}{{ ", " if not loop.last }}
             {% endfor %}
         </div>
-        <div class="paper-cell-buttons">
+        <div class="paper-cell-buttons" style="font-size: 14px;">
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="{{paper.link}}">link</a></li>
-                <li class="list-inline-item"><a href="#">bookmark</a></li>
-                <li class="list-inline-item"><a href="#">star</a></li>
-                <li class="list-inline-item"><a href="#">tags</a></li>
+                {# <i class="fas fa-bookmark"></i> #}
+                <li class="list-inline-item"><a class="icon" href="#"><i class="far fa-bookmark"></i></a></li>
+                {# <i class="fas fa-star"></i> #}
+                <li class="list-inline-item"><a class="icon" href="#"><i class="far fa-star"></i></a></li>
+                <li class="list-inline-item">tags: <a href="#">tag1</a>, <a href="#">tag1</a>, {% include('./add_tag.jinja2') %} </li>
             </ul>
         </div>
     </div>

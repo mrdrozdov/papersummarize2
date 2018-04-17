@@ -1,8 +1,11 @@
 from pyramid.view import view_config
 
-from .feed import new_feed
-
 
 @view_config(route_name='home', renderer='../templates/home.jinja2')
 def home(request):
-    return new_feed(request)
+    page = int(request.params.get('page', 0))
+    limit = 30
+    start = page * limit
+    end = (page+1) * limit
+    papers = request.registry.db.find()[start:end]
+    return {'project': 'papersummarize', 'papers': papers}

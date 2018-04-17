@@ -170,6 +170,18 @@ a {
   padding-left: 0px; 
 }
 
+.header .list-inline>li {
+  margin-right: 0 !important;
+}
+
+.main-nav .list-inline>li {
+  margin-right: 0 !important;
+}
+
+.paper-cell .list-inline>li {
+  margin-right: 0 !important;
+}
+
 ul.list-inline {
   margin-bottom: 0;
 }
@@ -180,8 +192,16 @@ ul.logo>li:first-child {
   padding-left: 0px;
 }
 
-ul.list-inline>li:not(:first-child):before {
+.header ul.list-inline>li:not(:first-child):before {
   content: " | ";
+}
+
+ul.list-inline.feed-nav>li:not(:first-child):before {
+  content: " | ";
+}
+
+.paper-cell-buttons ul.list-inline > li:not(:first-child):before {
+  content: " \2022\ ";
 }
 
 .header {
